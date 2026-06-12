@@ -1,0 +1,30 @@
+﻿@model IDGS904ConBase.Models.Maestro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles del Maestro</h2>
+
+<hr />
+
+<dl class="dl-horizontal">
+    <dt>Nombre</dt>
+    <dd>@Model.Nombre</dd>
+
+    <dt>Apellido Paterno</dt>
+    <dd>@Model.Apaterno</dd>
+
+    <dt>Apellido Materno</dt>
+    <dd>@Model.Amaterno</dd>
+
+    <dt>Especialidad</dt>
+    <dd>@Model.Especialidad</dd>
+
+    <dt>Correo</dt>
+    <dd>@Model.Correo</dd>
+</dl>
+
+<p>
+    @Html.ActionLink("Regresar", "Index")
+</p>
