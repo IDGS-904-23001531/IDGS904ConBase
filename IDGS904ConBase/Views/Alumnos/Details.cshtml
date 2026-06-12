@@ -1,0 +1,44 @@
+﻿@model IDGS904ConBase.Models.Alumno
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles del Alumno</h2>
+
+<div>
+    <hr />
+
+    <dl class="dl-horizontal">
+
+        <dt>Nombre</dt>
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>Apellido Paterno</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Apaterno)
+        </dd>
+
+        <dt>Apellido Materno</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Amaterno)
+        </dd>
+
+        <dt>Edad</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+        <dt>Correo</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Correo)
+        </dd>
+
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Regresar", "Index")
+</p>

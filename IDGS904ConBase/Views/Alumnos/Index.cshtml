@@ -1,0 +1,38 @@
+﻿@model IEnumerable<IDGS904ConBase.Models.Alumno>
+
+@{
+    ViewBag.Title = "Alumnos";
+}
+
+<h2>Lista de Alumnos</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Alumno", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido Paterno</th>
+        <th>Apellido Materno</th>
+        <th>Edad</th>
+        <th>Correo</th>
+        <th>Acciones</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.nombre</td>
+            <td>@item.Apaterno</td>
+            <td>@item.Amaterno</td>
+            <td>@item.Edad</td>
+            <td>@item.Correo</td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
